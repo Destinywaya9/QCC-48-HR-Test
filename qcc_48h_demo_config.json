@@ -1,0 +1,35 @@
+{
+    "demo_title": "QCC Soft Benchmark Demo",
+    "demo_window": {
+        "start": "2025-07-06T03:20:32.429535Z",
+        "end": "2025-07-08T03:20:32.429542Z"
+    },
+    "components": {
+        "frontend": {
+            "framework": "React + Tailwind",
+            "endpoint": "/simulate",
+            "features": [
+                "Predefined Simulation Selector",
+                "Real-Time Metric Display",
+                "Countdown Expiry Timer",
+                "Contact CTA Footer"
+            ]
+        },
+        "backend": {
+            "framework": "FastAPI",
+            "secured_endpoints": [
+                "/benchmark/state",
+                "/benchmark/ripple"
+            ],
+            "rate_limit": "20 req/minute per IP",
+            "auto_teardown": "Enabled after 48 hours",
+            "logging": "Sanitized, no IP storage"
+        },
+        "deployment": {
+            "platform": "Fly.io / Render / Railway (free tier)",
+            "container": "Docker + docker-compose",
+            "public_access": "Yes, restricted API only"
+        }
+    },
+    "contact": "echoarc.research@proton.me"
+}
